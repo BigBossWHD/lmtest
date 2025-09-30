@@ -56,7 +56,6 @@
 - `datasets/dataset_template.json`：数据集模板，可复制后填入任意竞赛题
 - `datasets/`：存放各类评测集（例如 `aime_2025_I.json`）
 - `results/`：评测输出目录，保存带详细日志的 JSON 报告
-- `AGENTS.md`：贡献者指南（编码规范、测试策略、配置约定）
 - `samples/`（可选）：轻量级样本数据，用于快速冒烟测试
 - `tests/`（可选）：推荐放置解析与投票逻辑的单元测试
 
