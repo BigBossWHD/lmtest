@@ -29,7 +29,7 @@
    export DEEPSEEK_BASE_URL="https://api.deepseek.com/v1"
    export DEEPSEEK_API_KEY="<your-key>"
 
-   python contest_eval_runner.py --samples 1 --hot_temp 0.7 --enable_judge \
+   python contest_eval_runner.py --samples 1 --hot_temp 0.7 --max_tokens 8192 --enable_judge \
      --base_url "$DEEPSEEK_BASE_URL" --api_key "$DEEPSEEK_API_KEY" \
      --model "deepseek-chat" --dataset datasets/logic_test.json
    ```
@@ -39,6 +39,7 @@
    - `--model`：被测模型名称，需与端点支持一致。
    - `--samples`：总生成次数（默认 1 次低温 + 若干高温样本），用于投票或多样性。
    - `--hot_temp`：高温样本温度，配合 `--samples` 调节生成差异。
+   - `--max_tokens`：生成上限（默认 8192，设为 0 时不发送该字段）。
    - `--enable_judge`：启用评审模型；默认读取 `JUDGE_BASE_URL`、`JUDGE_API_KEY`、`JUDGE_MODEL`，也可用 `--judge_*` 覆盖。
    - `--config`：可选 JSON 配置（字段 `base_url`、`model`、`api_key`），命令行参数优先级更高。
    - `--quiet`：仅输出最终汇总提示（默认逐题打印题干/答案）。
