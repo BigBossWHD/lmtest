@@ -262,7 +262,8 @@ def run_eval(dataset_path: str, base_url: str, model: str, n_samples: int = 3,
             pred_repr = [] if final_pred is None else [final_pred]
             question_preview = q if len(q) <= 120 else q[:117] + "..."
             print(f"[{idx:02d}] 题目：{question_preview}")
-            print(f"    模型答案={pred_repr} 参考答案={gold_list}")
+            print(f"    参考答案={gold_list}")
+            print(f"    模型答案={pred_repr}")
             if judge_feedback_entry:
                 verdict_repr = judge_feedback_entry.get("verdict_list", [])
                 explanation_repr = judge_feedback_entry.get("explanation_list", [])
@@ -272,6 +273,7 @@ def run_eval(dataset_path: str, base_url: str, model: str, n_samples: int = 3,
 
     summary = {
         "num_questions": total,
+        "model": model,
         "judge_total": judge_total if judge_config else None,
         "judge_correct": judge_correct if judge_config else None,
         "judge_accuracy_percent": round(judge_correct / judge_total * 100, 2) if judge_config and judge_total else None,
@@ -334,6 +336,7 @@ def main():
     total = summary["num_questions"]
     print("\n=== 统计结果 ===")
     print(f"题目总数：{total}")
+    print(f"被测模型：{model}")
     if judge_config:
         judge_total = summary.get("judge_total") or 0
         judge_correct = summary.get("judge_correct") or 0

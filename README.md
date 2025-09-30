@@ -62,6 +62,7 @@
 ## 报告内容
 `results/eval_report_<timestamp>.json` 包含：
 - `num_questions`：题目数量；目前不提供自动正确率，需人工复核
+- `model`：被测模型名称
 - `details` 列表（逐题记录）：
   - `question` 原题题干
   - `model_answer` 聚合后的模型答案
