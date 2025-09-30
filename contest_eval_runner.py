@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 DEFAULT_BASE_URL = "http://localhost:1234/v1"   # Local LM Studio default
 DEFAULT_MODEL = "openai/gpt-oss-20b"
 DEFAULT_SEED = 42
-TIMEOUT = 120
+TIMEOUT = 180
 RESULTS_DIR = "results"
 JUDGE_BASE_URL_ENV = "JUDGE_BASE_URL"
 JUDGE_API_KEY_ENV = "JUDGE_API_KEY"
