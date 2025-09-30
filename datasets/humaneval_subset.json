@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "HumanEval-subset",
+    "notes": "10 道简化 HumanEval 风格的编程题"
+  },
+  "problems": [
+    {
+      "question": "def add(a, b):\n    \"\"\"Return the sum of a and b\"\"\"\n    # your code here",
+      "answer": "return a + b"
+    },
+    {
+      "question": "def is_even(n):\n    \"\"\"Return True if n is even, else False\"\"\"\n    # your code here",
+      "answer": "return n % 2 == 0"
+    },
+    {
+      "question": "def factorial(n):\n    \"\"\"Return n!\"\"\"\n    # your code here",
+      "answer": "return 1 if n <= 1 else n * factorial(n-1)"
+    },
+    {
+      "question": "def reverse_str(s):\n    \"\"\"Return reversed string of s\"\"\"\n    # your code here",
+      "answer": "return s[::-1]"
+    },
+    {
+      "question": "def fib(n):\n    \"\"\"Return the n-th Fibonacci number (0-indexed)\"\"\"\n    # your code here",
+      "answer": "return fib(n-1) + fib(n-2) if n > 1 else n"
+    },
+    {
+      "question": "def is_palindrome(s):\n    \"\"\"Return True if s reads the same forward and backward\"\"\"\n    # your code here",
+      "answer": "return s == s[::-1]"
+    },
+    {
+      "question": "def list_sum(xs):\n    \"\"\"Return the sum of a list of numbers xs\"\"\"\n    # your code here",
+      "answer": "return sum(xs)"
+    },
+    {
+      "question": "def max_in_list(xs):\n    \"\"\"Return the maximum element in list xs\"\"\"\n    # your code here",
+      "answer": "return max(xs)"
+    },
+    {
+      "question": "def count_vowels(s):\n    \"\"\"Return the number of vowels in s (aeiou, case-insensitive)\"\"\"\n    # your code here",
+      "answer": "return sum(ch.lower() in 'aeiou' for ch in s)"
+    },
+    {
+      "question": "def unique_sorted(xs):\n    \"\"\"Return sorted unique elements of xs as a list\"\"\"\n    # your code here",
+      "answer": "return sorted(set(xs))"
+    }
+  ]
+}

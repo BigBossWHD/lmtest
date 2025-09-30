@@ -1,0 +1,188 @@
+{
+  "num_questions": 10,
+  "judge_total": 10,
+  "judge_correct": 7,
+  "judge_accuracy_percent": 70.0,
+  "details": [
+    {
+      "index": 1,
+      "question": "所有人都是凡人。苏格拉底是人。问：苏格拉底是不是凡人？",
+      "model_answer": "是",
+      "reference_answers": [
+        "是"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案一致，都正确回答了苏格拉底是凡人，基于题目中给出的逻辑前提：所有人都是凡人，苏格拉底是人。",
+        "explanation_list": [
+          "模型答案与参考答案一致，都正确回答了苏格拉底是凡人，基于题目中给出的逻辑前提：所有人都是凡人，苏格拉底是人。"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "question": "如果今天下雨，那么我带伞。今天没下雨。问：我带伞了吗？",
+      "model_answer": "不一定",
+      "reference_answers": [
+        "否"
+      ],
+      "judge_feedback": {
+        "verdict": "incorrect",
+        "verdict_list": [
+          "incorrect"
+        ],
+        "explanation": "题目是一个条件语句：如果下雨则带伞。前提'今天没下雨'为真时，无法确定结论'带伞'的真假。参考答案明确为'否'，表示确定没带伞，但模型回答'不一定'表示可能带伞也可能没带伞，与参考答案的确定性结论不一致。",
+        "explanation_list": [
+          "题目是一个条件语句：如果下雨则带伞。前提'今天没下雨'为真时，无法确定结论'带伞'的真假。参考答案明确为'否'，表示确定没带伞，但模型回答'不一定'表示可能带伞也可能没带伞，与参考答案的确定性结论不一致。"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "question": "甲 > 乙，乙 > 丙。谁最大？",
+      "model_answer": "甲",
+      "reference_answers": [
+        "甲"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案一致，都正确指出甲最大，因为甲 > 乙且乙 > 丙，根据传递性可得甲 > 丙。",
+        "explanation_list": [
+          "模型答案与参考答案一致，都正确指出甲最大，因为甲 > 乙且乙 > 丙，根据传递性可得甲 > 丙。"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "question": "小明比小红高，小红比小刚矮。谁最高？",
+      "model_answer": "无法确定",
+      "reference_answers": [
+        "小明"
+      ],
+      "judge_feedback": {
+        "verdict": "incorrect",
+        "verdict_list": [
+          "incorrect"
+        ],
+        "explanation": "题目明确说明小明比小红高，小红比小刚矮，这意味着小红比小刚矮，即小刚比小红高。结合小明比小红高，可以确定小明最高。模型回答'无法确定'与参考答案'小明'不一致。",
+        "explanation_list": [
+          "题目明确说明小明比小红高，小红比小刚矮，这意味着小红比小刚矮，即小刚比小红高。结合小明比小红高，可以确定小明最高。模型回答'无法确定'与参考答案'小明'不一致。"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "question": "一个袋子里有 3 个红球和 2 个蓝球，至少取一个。可能取出的颜色组合有多少种？",
+      "model_answer": "11",
+      "reference_answers": [
+        "5"
+      ],
+      "judge_feedback": {
+        "verdict": "incorrect",
+        "verdict_list": [
+          "incorrect"
+        ],
+        "explanation": "参考答案为5，表示可能的颜色组合（红、蓝、红蓝混合）有3种：全红、全蓝、混合，但题目要求'至少取一个'，因此需要考虑取球的数量。实际组合应为：取1个球（红或蓝，2种）、取2个球（红红、红蓝、蓝蓝，3种）、取3个球（红红红、红红蓝、红蓝蓝，3种）、取4个球（红红红蓝、红红蓝蓝，2种）、取5个球（红红红蓝蓝，1种），总计11种。但参考答案5可能仅考虑颜色类型而不考虑数量，模型答案11考虑了所有取球情况，与参考答案不一致。",
+        "explanation_list": [
+          "参考答案为5，表示可能的颜色组合（红、蓝、红蓝混合）有3种：全红、全蓝、混合，但题目要求'至少取一个'，因此需要考虑取球的数量。实际组合应为：取1个球（红或蓝，2种）、取2个球（红红、红蓝、蓝蓝，3种）、取3个球（红红红、红红蓝、红蓝蓝，3种）、取4个球（红红红蓝、红红蓝蓝，2种）、取5个球（红红红蓝蓝，1种），总计11种。但参考答案5可能仅考虑颜色类型而不考虑数量，模型答案11考虑了所有取球情况，与参考答案不一致。"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "question": "所有猫都会抓老鼠。汤姆是猫。问：汤姆会不会抓老鼠？",
+      "model_answer": "会",
+      "reference_answers": [
+        "会"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案完全一致，都肯定汤姆会抓老鼠，符合题目逻辑推理",
+        "explanation_list": [
+          "模型答案与参考答案完全一致，都肯定汤姆会抓老鼠，符合题目逻辑推理"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "question": "如果 A → B，且 B → C。则 A → ?",
+      "model_answer": "C",
+      "reference_answers": [
+        "C"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案完全一致，都正确地推导出A → C，符合逻辑传递性规则。",
+        "explanation_list": [
+          "模型答案与参考答案完全一致，都正确地推导出A → C，符合逻辑传递性规则。"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "question": "今天是星期五，那么三天后是星期几？",
+      "model_answer": "Monday",
+      "reference_answers": [
+        "星期一"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案'Monday'是英文的星期一，与参考答案'星期一'完全等价，表示相同的星期概念。",
+        "explanation_list": [
+          "模型答案'Monday'是英文的星期一，与参考答案'星期一'完全等价，表示相同的星期概念。"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "question": "若所有正方形都是矩形，所有矩形都是四边形。那么正方形是什么？",
+      "model_answer": "正方形是四边形",
+      "reference_answers": [
+        "四边形"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案在逻辑上等价，都正确表达了正方形是四边形的结论，符合题目给定的前提条件。",
+        "explanation_list": [
+          "模型答案与参考答案在逻辑上等价，都正确表达了正方形是四边形的结论，符合题目给定的前提条件。"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "question": "A 班全体学生都会游泳，小王是 A 班学生。问：小王会不会游泳？",
+      "model_answer": "会",
+      "reference_answers": [
+        "会"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "verdict_list": [
+          "correct"
+        ],
+        "explanation": "模型答案与参考答案一致，都正确推导出小王会游泳的结论，因为小王是A班学生，而A班全体学生都会游泳。",
+        "explanation_list": [
+          "模型答案与参考答案一致，都正确推导出小王会游泳的结论，因为小王是A班学生，而A班全体学生都会游泳。"
+        ]
+      }
+    }
+  ]
+}

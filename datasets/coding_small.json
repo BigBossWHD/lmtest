@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Small Coding Problems",
+    "notes": "Simple algorithmic coding questions"
+  },
+  "problems": [
+    {
+      "question": "写一个函数返回斐波那契数列前 5 项。",
+      "answer": "[0, 1, 1, 2, 3]"
+    },
+    {
+      "question": "输入字符串 'abcabc'，不同子串数是多少？",
+      "answer": "21"
+    },
+    {
+      "question": "判断整数 121 是否回文数？",
+      "answer": "是"
+    },
+    {
+      "question": "给定数组 [1,2,3,4,5]，求和是多少？",
+      "answer": "15"
+    },
+    {
+      "question": "将字符串 'hello' 转换为大写。",
+      "answer": "HELLO"
+    },
+    {
+      "question": "统计字符串 'banana' 中 'a' 出现次数。",
+      "answer": "3"
+    },
+    {
+      "question": "给定列表 [2,4,6,8]，求最大值。",
+      "answer": "8"
+    },
+    {
+      "question": "写一个函数判断 29 是否是质数。结果？",
+      "answer": "是"
+    },
+    {
+      "question": "输入 n=4，计算 n!。",
+      "answer": "24"
+    },
+    {
+      "question": "输入整数数组 [3,1,2]，排序后结果？",
+      "answer": "[1, 2, 3]"
+    }
+  ]
+}

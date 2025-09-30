@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "name": "AIME 2025 I",
+    "notes": "Official problems + answers (0..999)"
+  },
+  "problems": [
+    {
+      "question": "Find the sum of all integer bases b > 9 for which 17_b is a divisor of 97_b.",
+      "answer": "070"
+    },
+    {
+      "question": "On points B, C, and D lie in that order on side AC with AB : BC : CD = 1 : 2 : 3. The points E, F, G, H lie in that order on side BD with BE = 1, EF = 2, FG = 3, GH = 4, and all these are on BD. Let M be the reflection of D across F, and N be the reflection of G across E. The area of quadrilateral DEGF is 288. Find the area of hexagon AEMBNC.",
+      "answer": "588"
+    },
+    {
+      "question": "The 9 members of a baseball team go to an ice‑cream parlor and choose a flavor (chocolate, vanilla, strawberry), at least one of each. The number who chose chocolate > vanilla > strawberry. Let N be the number of assignments. Compute N mod 1000.",
+      "answer": "016"
+    },
+    {
+      "question": "Find the number of ordered pairs (x, y), both integers between −100 and 100 inclusive, such that 12x^2 – x y – 6y^2 = 0.",
+      "answer": "117"
+    },
+    {
+      "question": "There are 8! = 40320 eight‑digit positive integers using digits 1 through 8 exactly once. Let N be the count divisible by 22. Find N − 2025.",
+      "answer": "279"
+    },
+    {
+      "question": "An isosceles trapezoid has an inscribed circle tangent to all sides. The circle’s radius is 3, area of trapezoid is 72. Let the parallel sides be of lengths r and s with r ≠ s. Compute r^2 + s^2.",
+      "answer": "504"
+    },
+    {
+      "question": "The twelve letters A, B, C, D, E, F, G, H, I, J, K, L are randomly paired into six two‑letter words (letters in each word are alphabetical). These six words are then sorted alphabetically. What is the probability the last word contains G? Express as m/n, find m + n.",
+      "answer": "821"
+    },
+    {
+      "question": "Let k be a real number such that the system |25 + 20i − z| = 5 and |z − 4 − k| = |z − 3i − k| has exactly one complex solution z. Sum of all possible k = m/n (in lowest terms). Compute m + n.",
+      "answer": "077"
+    },
+    {
+      "question": "The parabola y = x^2 − 4 is rotated 60° counterclockwise about the origin. The unique intersection in the 4th quadrant has y‑coordinate c, expressible in form a – √b, where gcd(a,c)=1. Find a + b + c.",
+      "answer": "062"
+    },
+    {
+      "question": "Cells of a 3×9 grid are filled using numbers 1–9 so each row has distinct numbers and each 3×3 block (as in Sudoku) has distinct numbers. The count = p^a q^b r^c s^d where p, q, r, s are distinct primes. Find p·a + q·b + r·c + s·d.",
+      "answer": "081"
+    },
+    {
+      "question": "A piecewise linear function f defined by f(x)=x for x in [−1,1), f(x)=2−x for x in [1,3), and extended periodically with period 4. The parabola x = 3y^2 intersects graph of f at finitely many points. The sum of y‑coordinates = a + b√c / d in lowest terms; find a + b + c + d.",
+      "answer": "259"
+    },
+    {
+      "question": "The set of points in ℝ^3 satisfying x + y + z = 75 and inequalities x − yz < y − zx < z − x y forms three convex regions; exactly one has finite area. That area = a√b; find a + b.",
+      "answer": "510"
+    },
+    {
+      "question": "Alex divides a disk into 4 quadrants and draws 25 additional chords, each joining two random boundary points in different quadrants. What is the expected number of regions formed?",
+      "answer": "204"
+    },
+    {
+      "question": "Let ABCDE be a convex pentagon with AB = 14, BC = 7, CD = 24, DE = 13, EA = 26, and ∠B = ∠E = 60°. For each point X in plane define f(X) = AX + BX + CX + DX + EX. The minimal value is m + n√p, find m + n + p.",
+      "answer": "060"
+    },
+    {
+      "question": "Let N be the number of ordered triples (a, b, c) of positive integers ≤ 3 such that a + b + c is a multiple of 3. Compute N mod 1000.",
+      "answer": "735"
+    }
+  ]
+}

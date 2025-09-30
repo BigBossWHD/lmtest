@@ -1,0 +1,85 @@
+{
+  "num_questions": 10,
+  "details": [
+    {
+      "index": 1,
+      "question": "所有人都是凡人。苏格拉底是人。问：苏格拉底是不是凡人？",
+      "model_answer": "是",
+      "reference_answers": [
+        "是"
+      ]
+    },
+    {
+      "index": 2,
+      "question": "如果今天下雨，那么我带伞。今天没下雨。问：我带伞了吗？",
+      "model_answer": "不确定",
+      "reference_answers": [
+        "否"
+      ]
+    },
+    {
+      "index": 3,
+      "question": "甲 > 乙，乙 > 丙。谁最大？",
+      "model_answer": "甲",
+      "reference_answers": [
+        "甲"
+      ]
+    },
+    {
+      "index": 4,
+      "question": "小明比小红高，小红比小刚矮。谁最高？",
+      "model_answer": "小明",
+      "reference_answers": [
+        "小明"
+      ]
+    },
+    {
+      "index": 5,
+      "question": "一个袋子里有 3 个红球和 2 个蓝球，至少取一个。可能取出的颜色组合有多少种？",
+      "model_answer": "3",
+      "reference_answers": [
+        "5"
+      ]
+    },
+    {
+      "index": 6,
+      "question": "所有猫都会抓老鼠。汤姆是猫。问：汤姆会不会抓老鼠？",
+      "model_answer": "会",
+      "reference_answers": [
+        "会"
+      ]
+    },
+    {
+      "index": 7,
+      "question": "如果 A → B，且 B → C。则 A → ?",
+      "model_answer": "C",
+      "reference_answers": [
+        "C"
+      ]
+    },
+    {
+      "index": 8,
+      "question": "今天是星期五，那么三天后是星期几？",
+      "model_answer": "星期一",
+      "reference_answers": [
+        "星期一"
+      ]
+    },
+    {
+      "index": 9,
+      "question": "若所有正方形都是矩形，所有矩形都是四边形。那么正方形是什么？",
+      "model_answer": "四边形",
+      "reference_answers": [
+        "四边形"
+      ]
+    },
+    {
+      "index": 10,
+      "question": "A 班全体学生都会游泳，小王是 A 班学生。问：小王会不会游泳？",
+      "model_answer": "小王会游泳",
+      "reference_answers": [
+        "会"
+      ]
+    }
+  ]
+}

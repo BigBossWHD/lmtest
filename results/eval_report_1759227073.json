@@ -1,0 +1,128 @@
+{
+  "num_questions": 10,
+  "judge_total": 10,
+  "judge_correct": 8,
+  "judge_accuracy_percent": 80.0,
+  "details": [
+    {
+      "index": 1,
+      "question": "所有人都是凡人。苏格拉底是人。问：苏格拉底是不是凡人？",
+      "model_answer": "是",
+      "reference_answers": [
+        "是"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案一致，都肯定苏格拉底是凡人，基于题目中给出的前提'所有人都是凡人'和'苏格拉底是人'，逻辑推导出结论正确。"
+      }
+    },
+    {
+      "index": 2,
+      "question": "如果今天下雨，那么我带伞。今天没下雨。问：我带伞了吗？",
+      "model_answer": "不确定",
+      "reference_answers": [
+        "否"
+      ],
+      "judge_feedback": {
+        "verdict": "incorrect",
+        "explanation": "参考答案明确为'否'，表示没有带伞，而模型回答'不确定'，两者含义不同，因此不等价。"
+      }
+    },
+    {
+      "index": 3,
+      "question": "甲 > 乙，乙 > 丙。谁最大？",
+      "model_answer": "甲",
+      "reference_answers": [
+        "甲"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案一致，都正确指出甲最大，因为甲 > 乙且乙 > 丙，根据传递性可得甲 > 丙。"
+      }
+    },
+    {
+      "index": 4,
+      "question": "小明比小红高，小红比小刚矮。谁最高？",
+      "model_answer": "小明",
+      "reference_answers": [
+        "小明"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案一致，都指出小明最高，符合题目中小明比小红高、小红比小刚矮的逻辑关系。"
+      }
+    },
+    {
+      "index": 5,
+      "question": "一个袋子里有 3 个红球和 2 个蓝球，至少取一个。可能取出的颜色组合有多少种？",
+      "model_answer": "3",
+      "reference_answers": [
+        "5"
+      ],
+      "judge_feedback": {
+        "verdict": "incorrect",
+        "explanation": "参考答案为5，模型答案为3，数值不一致。可能的颜色组合包括：红、蓝、红红、红蓝、蓝蓝，共5种，而模型只给出了3种。"
+      }
+    },
+    {
+      "index": 6,
+      "question": "所有猫都会抓老鼠。汤姆是猫。问：汤姆会不会抓老鼠？",
+      "model_answer": "会",
+      "reference_answers": [
+        "会"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案一致，都正确地从前提'所有猫都会抓老鼠'和'汤姆是猫'推导出结论'汤姆会抓老鼠'。"
+      }
+    },
+    {
+      "index": 7,
+      "question": "如果 A → B，且 B → C。则 A → ?",
+      "model_answer": "C",
+      "reference_answers": [
+        "C"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案完全一致，都是C，符合逻辑推理规则"
+      }
+    },
+    {
+      "index": 8,
+      "question": "今天是星期五，那么三天后是星期几？",
+      "model_answer": "星期一",
+      "reference_answers": [
+        "星期一"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案完全一致，都是星期一，符合题目逻辑"
+      }
+    },
+    {
+      "index": 9,
+      "question": "若所有正方形都是矩形，所有矩形都是四边形。那么正方形是什么？",
+      "model_answer": "四边形",
+      "reference_answers": [
+        "四边形"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案完全一致，都是'四边形'，且符合题目逻辑推理的结果。"
+      }
+    },
+    {
+      "index": 10,
+      "question": "A 班全体学生都会游泳，小王是 A 班学生。问：小王会不会游泳？",
+      "model_answer": "小王会游泳",
+      "reference_answers": [
+        "会"
+      ],
+      "judge_feedback": {
+        "verdict": "correct",
+        "explanation": "模型答案与参考答案都明确表示小王会游泳，内容完全一致。"
+      }
+    }
+  ]
+}

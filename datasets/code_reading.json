@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Code Reading",
+    "notes": "Read small code snippets and predict outputs"
+  },
+  "problems": [
+    {
+      "question": "Python: print(2**3**2)",
+      "answer": "512"
+    },
+    {
+      "question": "C: for(int i=0;i<3;i++){printf(\"%d\",i);} 输出？",
+      "answer": "012"
+    },
+    {
+      "question": "Python: [x for x in range(5) if x%2==0]",
+      "answer": "[0, 2, 4]"
+    },
+    {
+      "question": "Python: print('Hello'[::-1])",
+      "answer": "olleH"
+    },
+    {
+      "question": "Python: sum(range(1, 6))",
+      "answer": "15"
+    },
+    {
+      "question": "Python: ''.join(sorted('cba'))",
+      "answer": "abc"
+    },
+    {
+      "question": "Python: print(len(set([1,2,2,3,3,3])))",
+      "answer": "3"
+    },
+    {
+      "question": "Python: print(bool([]))",
+      "answer": "False"
+    },
+    {
+      "question": "Python: print('A' < 'a')",
+      "answer": "True"
+    },
+    {
+      "question": "Python: print(type({}))",
+      "answer": "<class 'dict'>"
+    }
+  ]
+}

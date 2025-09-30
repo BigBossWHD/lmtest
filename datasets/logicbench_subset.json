@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "LogicBench-subset",
+    "notes": "10 道逻辑推理题（命题 / 条件 / 否定 / 传递 / 逆否）"
+  },
+  "problems": [
+    {
+      "question": "如果 P → Q，且 P 为真，那么 Q 是真还是假？",
+      "answer": "真"
+    },
+    {
+      "question": "如果今天下雨则我带伞。不下雨。我会带伞吗？",
+      "answer": "否"
+    },
+    {
+      "question": "所有 A 都是 B。若 X 是 A，则 X 是 B 吗？",
+      "answer": "是"
+    },
+    {
+      "question": "若 ¬P → ¬Q，则 Q → P 吗？",
+      "answer": "是"
+    },
+    {
+      "question": "如果 A 且 B 都为真，则 A 或 B 为真吗？",
+      "answer": "是"
+    },
+    {
+      "question": "若 P → Q 且 Q → R，则 P → R 成立吗？",
+      "answer": "成立"
+    },
+    {
+      "question": "若 P → Q 且 ¬Q，则 P 成立吗？",
+      "answer": "不一定"
+    },
+    {
+      "question": "若 A ⊕ B（恰好一个为真），且 A 为真，则 B 为真吗？",
+      "answer": "否"
+    },
+    {
+      "question": "若 A ∨ B 为真，且 ¬A 为真，则 B 为真吗？",
+      "answer": "真"
+    },
+    {
+      "question": "德摩根律：¬(A ∧ B) 等价于什么？",
+      "answer": "¬A ∨ ¬B"
+    }
+  ]
+}

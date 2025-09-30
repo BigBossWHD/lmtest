@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Quick QA",
+    "notes": "Basic factual and common knowledge questions"
+  },
+  "problems": [
+    {
+      "question": "中国的首都是哪里？",
+      "answer": "北京"
+    },
+    {
+      "question": "5 的阶乘是多少？",
+      "answer": "120"
+    },
+    {
+      "question": "π 约等于多少（取前三位小数）？",
+      "answer": "3.142"
+    },
+    {
+      "question": "世界上人口最多的国家？",
+      "answer": "中国"
+    },
+    {
+      "question": "地球有几个大陆？",
+      "answer": "7"
+    },
+    {
+      "question": "光速大约是多少（单位 km/s，取整数）？",
+      "answer": "300000"
+    },
+    {
+      "question": "美国的第一任总统是谁？",
+      "answer": "乔治华盛顿"
+    },
+    {
+      "question": "64 的平方根是多少？",
+      "answer": "8"
+    },
+    {
+      "question": "1 公里等于多少米？",
+      "answer": "1000"
+    },
+    {
+      "question": "水的化学式是？",
+      "answer": "H2O"
+    }
+  ]
+}

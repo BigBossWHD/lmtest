@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Tricky Common Sense",
+    "notes": "10 道常识 / 语言陷阱 / 小谜题"
+  },
+  "problems": [
+    {
+      "question": "Which is heavier: a pound of bricks or a pound of feathers?",
+      "answer": "一样重"
+    },
+    {
+      "question": "If you have it, you want to share it; if you share it, you don't have it. What is it?",
+      "answer": "秘密"
+    },
+    {
+      "question": "什么东西你越拿越多？",
+      "answer": "洞"
+    },
+    {
+      "question": "太阳从东方升起吗？",
+      "answer": "是"
+    },
+    {
+      "question": "一个月有多少天是 28 天？",
+      "answer": "所有月份"
+    },
+    {
+      "question": "什么东西越擦越湿？",
+      "answer": "毛巾"
+    },
+    {
+      "question": "两位父亲和两位儿子共三人去钓鱼，每人一条鱼，共带回几条？",
+      "answer": "3 条"
+    },
+    {
+      "question": "时钟上，分针和时针一天重合几次？",
+      "answer": "22 次"
+    },
+    {
+      "question": "一个农夫有 17 只羊，除了 9 只都死了，还剩几只？",
+      "answer": "9 只"
+    },
+    {
+      "question": "什么东西有很多键却打不开任何门？",
+      "answer": "键盘"
+    }
+  ]
+}

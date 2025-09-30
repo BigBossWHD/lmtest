@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Logic Test",
+    "notes": "Basic logic reasoning and deduction questions"
+  },
+  "problems": [
+    {
+      "question": "所有人都是凡人。苏格拉底是人。问：苏格拉底是不是凡人？",
+      "answer": "是"
+    },
+    {
+      "question": "如果今天下雨，那么我带伞。今天没下雨。问：我带伞了吗？",
+      "answer": "否"
+    },
+    {
+      "question": "甲 > 乙，乙 > 丙。谁最大？",
+      "answer": "甲"
+    },
+    {
+      "question": "小明比小红高，小红比小刚矮。谁最高？",
+      "answer": "小明"
+    },
+    {
+      "question": "一个袋子里有 3 个红球和 2 个蓝球，至少取一个。可能取出的颜色组合有多少种？",
+      "answer": "5"
+    },
+    {
+      "question": "所有猫都会抓老鼠。汤姆是猫。问：汤姆会不会抓老鼠？",
+      "answer": "会"
+    },
+    {
+      "question": "如果 A → B，且 B → C。则 A → ?",
+      "answer": "C"
+    },
+    {
+      "question": "今天是星期五，那么三天后是星期几？",
+      "answer": "星期一"
+    },
+    {
+      "question": "若所有正方形都是矩形，所有矩形都是四边形。那么正方形是什么？",
+      "answer": "四边形"
+    },
+    {
+      "question": "A 班全体学生都会游泳，小王是 A 班学生。问：小王会不会游泳？",
+      "answer": "会"
+    }
+  ]
+}
