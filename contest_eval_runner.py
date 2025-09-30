@@ -34,7 +34,7 @@ Please respond with the final output on its own line in the form `Answer: <conte
 
 def call_openai_compatible_chat(base_url: str, model: str, messages: List[Dict[str, str]],
                                 temperature: float = 0.0, top_p: float = 1.0, seed: Optional[int] = None,
-                                max_tokens: int = 8192, api_key: Optional[str] = None) -> Dict[str, str]:
+                                max_tokens: Optional[int] = None, api_key: Optional[str] = None) -> Dict[str, str]:
     """Calls an OpenAI-compatible /chat/completions endpoint (LM Studio)."""
     url = f"{base_url}/chat/completions"
     auth_token = api_key or "lm-studio"
@@ -47,10 +47,11 @@ def call_openai_compatible_chat(base_url: str, model: str, messages: List[Dict[s
         "messages": messages,
         "temperature": temperature,
         "top_p": top_p,
-        "max_tokens": max_tokens,
     }
     if seed is not None:
         payload["seed"] = seed
+    if max_tokens is not None:
+        payload["max_tokens"] = max_tokens
 
     parsed = urlparse(base_url)
     proxies = None
@@ -158,7 +159,8 @@ def run_eval(dataset_path: str, base_url: str, model: str, n_samples: int = 3,
              temperature_cold: float = 0.0, temperature_hot: float = 0.7,
              seed: int = DEFAULT_SEED, api_key: Optional[str] = None,
              show_details: bool = True,
-             judge_config: Optional[Dict[str, str]] = None) -> Dict[str, Any]:
+             judge_config: Optional[Dict[str, str]] = None,
+             max_tokens: Optional[int] = None) -> Dict[str, Any]:
     """
     For each problem, generate n_samples (1 cold + hot samples),
     take majority vote among parsed answers; ties prefer the cold sample, otherwise lexicographically smallest.
@@ -184,7 +186,8 @@ def run_eval(dataset_path: str, base_url: str, model: str, n_samples: int = 3,
         pred_cold = None
         try:
             out_cold = call_openai_compatible_chat(base_url, model, [messages_sys, messages_user],
-                                                   temperature=temperature_cold, seed=seed, api_key=api_key)
+                                                   temperature=temperature_cold, seed=seed, api_key=api_key,
+                                                   max_tokens=max_tokens)
         except Exception as e:
             print(f"[{idx:02d}] cold sample error: {e}")
             out_cold = None
@@ -204,7 +207,7 @@ def run_eval(dataset_path: str, base_url: str, model: str, n_samples: int = 3,
             try:
                 out_hot = call_openai_compatible_chat(base_url, model, [messages_sys, messages_user],
                                                       temperature=temperature_hot, seed=random.randint(0, 10**9),
-                                                      api_key=api_key)
+                                                      api_key=api_key, max_tokens=max_tokens)
             except Exception as e:
                 print(f"[{idx:02d}] hot sample error: {e}")
                 continue
@@ -289,6 +292,7 @@ def main():
     ap.add_argument("--samples", type=int, default=3, help="Total generations per problem (>=1).")
     ap.add_argument("--hot_temp", type=float, default=0.7, help="Temperature for hot samples (>= 0.0).")
     ap.add_argument("--api_key", type=str, default=None, help="Optional bearer token for Authorization header.")
+    ap.add_argument("--max_tokens", type=int, default=None, help="Optional max_tokens upper bound；若未设置则不限制。")
     ap.add_argument("--config", type=str, default=None, help="Optional JSON file providing base_url/model/api_key defaults.")
     ap.add_argument("--quiet", action="store_true", help="Suppress per-question console output.")
     ap.add_argument("--verbose", action="store_true", help="After running, print the full JSON summary to stdout.")
@@ -325,7 +329,8 @@ def main():
 
     summary = run_eval(args.dataset, base_url, model, n_samples=args.samples,
                        temperature_hot=args.hot_temp, api_key=api_key,
-                       show_details=show_details, judge_config=judge_config)
+                       show_details=show_details, judge_config=judge_config,
+                       max_tokens=args.max_tokens)
 
     # Save report
     ts = int(time.time())
