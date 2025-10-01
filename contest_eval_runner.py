@@ -1,8 +1,15 @@
 
 import argparse, json, time, re, random, os
 from typing import List, Dict, Any, Optional
-import requests
 from urllib.parse import urlparse
+
+try:
+    import requests  # type: ignore
+except ImportError as exc:  # pragma: no cover - exercised in runtime environments without requests
+    requests = None  # type: ignore
+    _REQUESTS_IMPORT_ERROR = exc
+else:
+    _REQUESTS_IMPORT_ERROR = None
 
 # ---------------
 # Config defaults
@@ -36,7 +43,13 @@ def call_openai_compatible_chat(base_url: str, model: str, messages: List[Dict[s
                                 temperature: float = 0.0, top_p: float = 1.0, seed: Optional[int] = None,
                                 max_tokens: Optional[int] = 8192, api_key: Optional[str] = None) -> Dict[str, str]:
     """Calls an OpenAI-compatible /chat/completions endpoint (LM Studio)."""
-    url = f"{base_url}/chat/completions"
+    if requests is None:  # pragma: no cover - triggered only when dependency missing at runtime
+        raise RuntimeError(
+            "requests 库未安装。请先运行 `python -m pip install requests` 再执行评测脚本。"
+        ) from _REQUESTS_IMPORT_ERROR
+
+    normalized_base_url = base_url.rstrip('/')
+    url = f"{normalized_base_url}/chat/completions"
     auth_token = api_key or "lm-studio"
     headers = {
         "Content-Type": "application/json",
@@ -53,7 +66,7 @@ def call_openai_compatible_chat(base_url: str, model: str, messages: List[Dict[s
     if max_tokens is not None:
         payload["max_tokens"] = max_tokens
 
-    parsed = urlparse(base_url)
+    parsed = urlparse(normalized_base_url)
     proxies = None
     if parsed.hostname in {"localhost", "127.0.0.1"}:
         proxies = {"http": None, "https": None}

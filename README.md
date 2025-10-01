@@ -7,7 +7,7 @@
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
-   python3 -m pip install requests  # 若尚未安装
+   python3 -m pip install -r requirements.txt  # 若只需 requests 也可单独安装
    ```
 2. **确认推理端点可用**
    - 本地：例如 LM Studio 默认 `http://localhost:1234/v1`
@@ -57,7 +57,7 @@
 - `datasets/dataset_template.json`：数据集模板，可复制后填入任意竞赛题
 - `datasets/`：存放各类评测集（例如 `aime_2025_I.json`）
 - `results/`：评测输出目录，保存带详细日志的 JSON 报告
-- `samples/`（可选）：轻量级样本数据，用于快速冒烟测试
+- `samples/`：轻量级样本数据（仓库内含 `contest_sample.json`），可快速冒烟测试
 - `tests/`（可选）：推荐放置解析与投票逻辑的单元测试
 
 ## 报告内容
@@ -89,6 +89,7 @@
   默认读取 `JUDGE_BASE_URL` / `JUDGE_API_KEY` / `JUDGE_MODEL`，可用 `--judge_base_url`、`--judge_model`、`--judge_api_key` 覆盖。评审仅提供参考，请结合参考答案自行判断。
 
 ## 故障排查
+- **`requests` 未安装**：脚本会在运行时给出提示。请执行 `python3 -m pip install -r requirements.txt`（或单独安装 `requests`）。
 - **模型只输出推理无结论**：强化提示，确保末行必须写成 `Answer: ...`；或调整脚本解析逻辑
 - **请求失败或无响应**：检查端点、API Key 与网络代理；脚本会自动禁用 `localhost` 的代理环境变量
 - **所有题目相同答案**：确认模型已正确加载；可在端点控制台直接发送同样的 system/user prompt 验证
