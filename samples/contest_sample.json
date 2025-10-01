@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "name": "Sample Contest Mini",
+    "notes": "Minimal dataset for smoke testing the evaluator pipeline."
+  },
+  "problems": [
+    {
+      "question": "Compute 2 + 2.",
+      "answer": "4"
+    },
+    {
+      "question": "If a list contains [1, 2, 3], what is its length?",
+      "answer": "3"
+    }
+  ]
+}
+
